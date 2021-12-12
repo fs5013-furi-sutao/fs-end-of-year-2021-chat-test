@@ -13,8 +13,8 @@ type Props = {
 
 const MarkDownEditor: React.FC<Props> = ({ postAction }) => {
   const [value, setValue] = React.useState('');
-  const [selectedTab, setSelectedTab] = React.useState<'記入' | 'プレビュー'>(
-    '記入'
+  const [selectedTab, setSelectedTab] = React.useState<'write' | 'preview'>(
+    'write'
   );
 
   const post = (body: string) => {
