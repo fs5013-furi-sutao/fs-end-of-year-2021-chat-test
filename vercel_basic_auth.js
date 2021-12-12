@@ -26,7 +26,7 @@ const app = protect(
     (username, password) => safeCompare(username, process.env.USER_NAME)
         && safeCompare(password, process.env.PASSWORD),
     {
-        directory: __dirname + '/public',
+        directory: __dirname + '/out',
         realm: 'vercel-basic-auth.node-static-auth',
         onAuthFailed: res => {
             res.end(pageTemplate)
